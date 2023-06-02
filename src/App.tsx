@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import imageToAdd from "./../src/images/weather-app.png";
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 
@@ -12,18 +13,17 @@ function App() {
     <div className="App">
       <div className={darkMode ? "dark" : "light"}>
         <div className="header-container">
-          <header id="App-header">
+          <header className="App-header">
             <h1>Dilek Baykara</h1>
             <div id="menu-bar">
               <h3>About</h3>
               <h3>Projects</h3>
               <h3>Resume</h3>
 
-              <input type="checkbox" onClick={toggleDarkMode} />
+              <input type="checkbox" id="checkbox" onClick={toggleDarkMode} />
               <h3>Dark</h3>
             </div>
           </header>
-          <hr />
         </div>
         <div className="content">
           <div id="intro">Hi, My name is Dilek Baykara</div>
@@ -41,15 +41,12 @@ function App() {
               <div className="skill-divs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  enable-background="new 0 0 24 24"
+                  viewBox="0 0 24 24"
                   id="javascript"
                   fill="currentColor"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M15.328 18.432c-1.745 0-2.873-.832-3.423-1.92l1.53-.886c.403.658.926 1.141 1.853 1.141.778 0 1.275-.389 1.275-.926 0-.808-1.078-1.124-1.839-1.45-1.356-.577-2.256-1.302-2.256-2.833 0-1.409 1.074-2.483 2.753-2.483 1.194 0 2.054.416 2.671 1.503l-1.463.94c-.322-.577-.671-.805-1.208-.805-.551 0-.9.349-.9.805 0 .564.349.792 1.155 1.141 1.689.724 2.967 1.293 2.967 3.155 0 1.692-1.329 2.618-3.115 2.618zM11 15.599c0 1.947-1.199 2.976-2.864 2.976-1.504 0-2.405-.575-2.848-1.575h-.026l1.529-1.069c.295.523.561.894 1.205.894.618 0 1.004-.313 1.004-1.252V9h2v6.599zM0 20h20V0H0v20z"
-                  ></path>
+                  <path d="M0,24h24V0H0V24z M19.784,18.629c-0.255-0.961-2.251-1.185-3.616-2.205c-1.38-0.93-1.709-3.18-0.569-4.471c0.39-0.48,1.034-0.84,1.71-1.005l0.705-0.089c1.365-0.031,2.204,0.329,2.834,1.034c0.182,0.179,0.316,0.36,0.586,0.78c-0.721,0.449-0.721,0.449-1.755,1.125c-0.226-0.48-0.586-0.78-0.976-0.9c-0.6-0.18-1.365,0.014-1.515,0.66c-0.059,0.195-0.045,0.375,0.046,0.705c0.243,0.555,1.061,0.795,1.797,1.14c2.115,0.858,2.828,1.778,3.003,2.873l-0.046-0.067c0.166,0.945-0.045,1.56-0.074,1.65c-0.781,2.67-5.131,2.76-6.871,1.004c-0.36-0.42-0.6-0.629-0.81-1.109l1.83-1.051c0.495,0.75,0.944,1.156,1.755,1.336C18.914,20.174,20.024,19.799,19.784,18.629z M8.133,18.976c0.017,0,0.064,0.091,0.127,0.196c0.233,0.389,0.434,0.659,0.83,0.855c0.386,0.121,1.236,0.209,1.566-0.48c0.201-0.348,0.138-1.479,0.138-2.711c0-1.941,0.009-3.867,0.009-5.805h2.248l-0.004,0.056c0,2.07,0.012,4.125,0,6.179c0.005,1.276,0.113,2.416-0.397,3.346c-0.353,0.72-1.028,1.185-1.811,1.411c-1.203,0.27-2.352,0.105-3.207-0.405c-0.574-0.345-1.019-0.887-1.324-1.517L8.133,18.976z"></path>
                 </svg>
                 <p>Javascript</p>
               </div>
@@ -80,11 +77,13 @@ function App() {
               <div className="skill-divs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 40 40"
+                  viewBox="0 0 128 128"
                   id="git"
-                  fill="currentColor"
                 >
-                  <path d="M31.55 18.93 21.07 8.45a1.56 1.56 0 0 0-2.19 0l-2.17 2.18 2.76 2.76a1.83 1.83 0 0 1 2.32 2.34l2.66 2.66a1.84 1.84 0 1 1-.7 3 1.85 1.85 0 0 1-.4-2L20.87 17v6.52a2 2 0 0 1 .48.35 1.85 1.85 0 1 1-2-.4v-6.64a1.82 1.82 0 0 1-1-2.41l-2.71-2.72-7.19 7.18a1.56 1.56 0 0 0 0 2.19l10.48 10.48a1.56 1.56 0 0 0 2.19 0l10.43-10.43a1.56 1.56 0 0 0 0-2.19"></path>
+                  <path
+                    fill="currentColor"
+                    d="M124.737 58.378l-55.116-55.114c-3.172-3.174-8.32-3.174-11.497 0l-11.444 11.446 14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679-3.78 3.78-9.901 3.78-13.683 0-2.842-2.844-3.545-7.019-2.105-10.521l-13.048-13.048-.002 34.341c.922.455 1.791 1.063 2.559 1.828 3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683.934-.933 2.014-1.638 3.167-2.11v-34.659c-1.153-.472-2.231-1.172-3.167-2.111-2.862-2.86-3.551-7.06-2.083-10.576l-14.313-14.313-37.792 37.79c-3.175 3.177-3.175 8.325 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858c3.174-3.176 3.174-8.327-.001-11.501z"
+                  ></path>
                 </svg>
                 <p>Git</p>
               </div>
@@ -160,13 +159,85 @@ function App() {
           </div>
           <div id="projects-div">
             <div id="projects">Projects</div>
+            <div id="project-div-1">
+              <div id="weather-app" className="project-divs">
+                <img
+                  alt="project-preview"
+                  src={imageToAdd}
+                  id="weather-app-img"
+                ></img>
+                <div className="project-title-div">
+                  <div className="project-title">Weather App</div>
+                  <div className="project-icon-div">
+                    <a
+                      id="github-icon"
+                      className="project-icon"
+                      href="CHANGE WEBSITE FOR THIS"
+                      color="currentColor"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        data-name="Layer 1"
+                        viewBox="0 0 24 24"
+                        id="github-logo-project"
+                        fill="currentColor"
+                        preserveAspectRatio="none"
+                      >
+                        <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path>
+                      </svg>
+                    </a>
+                    <svg
+                      id="www-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                    >
+                      <svg
+                        className="project-icon"
+                        id="www-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 92 92"
+                      >
+                        <path
+                          d="M46 0C20.6 0 0 20.6 0 46s20.6 46 46 46 46-20.6 46-46S71.4 0 46 0zm3.7 83.8c-.2 0-.4 0-.7.1V62.2c5.2-.1 9.9-.2 14.2-.5-3.8 11.7-10.9 19.5-13.5 22.1zm-7.4 0c-2.7-2.7-9.7-10.5-13.5-22.1 4.2.3 9 .5 14.2.5v21.7c-.2 0-.4-.1-.7-.1zM8 46c0-2.5.3-5 .7-7.4 2.2-.4 6.4-1 12.3-1.6-.5 2.9-.8 5.9-.8 9.1 0 3.2.3 6.2.7 9-5.8-.6-10.1-1.2-12.3-1.6-.3-2.5-.6-5-.6-7.5zm18.3 0c0-3.4.4-6.6 1-9.6 4.6-.3 9.8-.6 15.7-.6v20.4c-5.8-.1-11.1-.3-15.8-.7-.5-2.9-.9-6.1-.9-9.5zM49.6 8.2c2.7 2.7 9.6 10.7 13.5 22.1-4.2-.3-8.9-.5-14.1-.5V8.1c.2 0 .4.1.6.1zM43 8.1v21.7c-5.2.1-9.9.2-14.1.5 3.8-11.4 10.8-19.4 13.4-22.1.3 0 .5-.1.7-.1zm6 48.1V35.8c5.8.1 11.1.3 15.7.6.6 3 1 6.2 1 9.6 0 3.4-.3 6.6-.9 9.6-4.6.3-9.9.5-15.8.6zM70.9 37c5.9.6 10.1 1.2 12.3 1.6.5 2.4.8 4.9.8 7.4s-.3 5-.7 7.4c-2.2.4-6.4 1-12.3 1.6.5-2.9.7-5.9.7-9.1 0-3-.3-6.1-.8-8.9zm10.5-4.8c-2.8-.4-6.8-.9-11.9-1.4-2.4-8.6-6.6-15.5-10.1-20.4 10.1 3.8 18.1 11.8 22 21.8zM32.6 10.4c-3.6 4.8-7.7 11.7-10.1 20.3-5 .4-9 1-11.9 1.4 3.9-9.9 12-17.9 22-21.7zm-22 49.4c2.8.4 6.8.9 11.8 1.4 2.4 8.6 6.4 15.5 10 20.3-10-3.9-17.9-11.8-21.8-21.7zm49 21.7c3.6-4.8 7.6-11.6 10-20.2 5-.4 9-1 11.8-1.4-3.9 9.8-11.8 17.7-21.8 21.6z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </svg>
+                  </div>
+                </div>
+                <div className="language-box">
+                  React, TypeScript, Public API, CSS
+                </div>
 
-            <div>Weather App</div>
-            <div>To do List</div>
-            <div>Restaurant</div>
-            <div>Tic Tac Toe Game</div>
-            <div>Library</div>
-            <div>Rock Paper Scissors</div>
+                <div className="project-description">
+                  Weather App that displays temperature details, 5 day forecast,
+                  hourly forecast graph for 24 hr period, and a geo location
+                  function.
+                </div>
+              </div>
+              <div className="project-divs">
+                <div className="project-title">To Do List</div>
+                <div className="language-box">React, TypeScript, CSS</div>
+                <div className="project-description">To Do List</div>
+              </div>
+            </div>
+            <div id="project-div-2">
+              <div className="project-divs">
+                <div className="project-title">Restaurant</div>
+                <div className="language-box">Javascript, Webpack, CSS</div>
+                <div className="project-description">Restaurant</div>
+              </div>
+              <div className="project-divs">
+                <div className="project-title">Tic Tac Toe Game</div>
+                <div className="language-box">Javascript, HTML, CSS</div>
+                <div className="project-description">Tic Tac Toe</div>
+              </div>
+              <div className="project-divs">
+                <div className="project-title">Library</div>
+                <div className="language-box">Javascript, HTML, CSS</div>
+                <div className="project-description">Library</div>
+              </div>
+            </div>
             <div></div>
           </div>
           <div id="resume-box">
@@ -175,8 +246,62 @@ function App() {
               I am looking for new opportunities, if you would like to work
               together, please reach out!
             </p>
-            <button id="resume-button">Resume</button>
-            <p>GitHub Icon</p> <p>LinkedIn Icon</p>
+            <button id="resume-button">Download Resume</button>
+            <div className="icon-footer">
+              <a
+                id="github-icon"
+                className="footer-icon"
+                href="https://github.com/dilekbaykara"
+                color="currentColor"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                  id="github-logo"
+                  fill="currentColor"
+                >
+                  <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path>
+                </svg>
+              </a>
+              <a
+                id="linked-in-icon"
+                className="footer-icon"
+                href="https://www.linkedin.com/in/dilek-b-b33a9148/"
+                color="currentColor"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                  width="256"
+                  height="256"
+                  id="linked-in"
+                >
+                  <path
+                    d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="mail"
+                x="0"
+                y="0"
+                version="1.1"
+                viewBox="0 0 29 29"
+              >
+                <path
+                  fill="currentColor"
+                  d="M2 7.42v14.172l7.086-7.086zM3.408 6l8.971 8.971c1.133 1.133 3.109 1.133 4.242 0L25.592 6H3.408z"
+                ></path>
+                <path
+                  fill="currentColor"
+                  d="M18.035 16.385c-.943.944-2.199 1.465-3.535 1.465s-2.592-.521-3.535-1.465l-.465-.465L3.42 23h22.16l-7.08-7.08-.465.465zM19.914 14.506L27 21.592V7.42z"
+                ></path>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
