@@ -1,10 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: inherit;
 }
 
 .App {
   text-align: center;
+  height: 100%;
+  background-color: inherit;
 }
 
 h1 {
@@ -22,11 +25,14 @@ h3 {
 .dark {
   background-color: rgb(0, 0, 0);
   color: rgb(12, 255, 162);
+  height: 100%;
+  margin: 0;
 }
 
 .light {
   background-color: white;
   color: black;
+  height: 100%;
 }
 
 .App-header {
@@ -83,10 +89,13 @@ p {
 
 .content {
   width: 100%;
-  height: 300vh;
+  height: 100%;
   float: none;
   position: relative;
   top: 100px;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #intro {
@@ -167,6 +176,13 @@ p {
   width: 19rem;
   padding: 1rem;
   border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.project-divs:hover {
+  bottom: 100%;
+  left: 100%;
+  transform: translate(3%, -3%);
 }
 
 #project-div-1 {
@@ -231,10 +247,23 @@ p {
   border-radius: 5px;
 }
 
+#to-do-app-img {
+  height: 150px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+#tic-tac-toe-img {
+  height: 150px;
+  width: 200px;
+  border-radius: 5px;
+}
+
 #resume-box {
   height: 10rem;
   background-color: inherit;
-  margin-top: 40rem;
+  padding-top: 40rem;
+  padding-bottom: 10rem;
 }
 
 #resume {
