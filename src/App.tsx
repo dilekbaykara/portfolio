@@ -32,10 +32,12 @@ function App() {
           <div id="intro">Hi, My name is Dilek Baykara</div>
           <div id="about">
             <div id="about-me">About Me</div>
-            <p>
-              I'm an ambitious, self-taught developer who loves working through
-              problems.
-            </p>
+            <div id="info">
+              I am a self taught software engineer with years of experience as a
+              graphic designer and illustrator. I love solving problems and
+              building complex projects that blend my love of programming with
+              my innate desire to create beautiful and functional projects.
+            </div>
           </div>
           <div id="skills-box">
             <div id="skills">Current Skills</div>

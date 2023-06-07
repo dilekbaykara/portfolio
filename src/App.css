@@ -61,6 +61,13 @@ h3 {
   border-bottom: solid;
 }
 
+#info {
+  padding: 30px;
+  font-family: "input-sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
 #menu-bar {
   flex-direction: row;
   display: flex;
@@ -129,6 +136,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 4rem;
 }
 
 #skills {
@@ -143,6 +151,7 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
+  margin-top: 4rem;
 }
 #projects-div {
   font-family: "input-mono", monospace;
@@ -270,6 +279,7 @@ p {
   background-color: inherit;
   padding-top: 45rem;
   padding-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 #resume {
