@@ -443,6 +443,7 @@ function App() {
                   ></path>
                 </svg>
               </a>
+
               <svg
                 onClick={() =>
                   (window.location.href = "mailto:baykara.d@gmail.com")
