@@ -444,6 +444,9 @@ function App() {
                 </svg>
               </a>
               <svg
+                onClick={() =>
+                  (window.location.href = "mailto:baykara.d@gmail.com")
+                }
                 xmlns="http://www.w3.org/2000/svg"
                 id="mail"
                 className="footer-icon"
