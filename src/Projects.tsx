@@ -233,11 +233,11 @@ function Projects() {
           <div className="language-box">Javascript, HTML, CSS</div>
           <div className="project-description">Tic Tac Toe</div>
         </div>
-        <div className="project-divs">
+        {/* <div className="project-divs">
           <div className="project-title">Library</div>
           <div className="language-box">Javascript, HTML, CSS</div>
           <div className="project-description">Library</div>
-        </div>
+        </div> */}
       </div>
       <div></div>
     </div>

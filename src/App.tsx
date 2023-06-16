@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { MutableRefObject, useRef, useState } from "react";
 import "./App.css";
 import { Element } from "react-scroll";
 // import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./Navbar";
 
 import { Router, Routes } from "react-router-dom";
 import About from "./About";
@@ -16,28 +15,41 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+  const ref = useRef() as MutableRefObject<HTMLDivElement>;
+  const ref2 = useRef() as MutableRefObject<HTMLDivElement>;
+  const ref3 = useRef() as MutableRefObject<HTMLDivElement>;
+  const handleClick = () => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleClick2 = () => {
+    ref2.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleClick3 = () => {
+    ref3.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="App">
       <div className={darkMode ? "dark" : "light"}>
-        {/* <Router location={""} navigator={}> */}
-        {/* <Navbar /> */}
-        {/* <Routes>
-            <Routes path={"/"} element={""}></Routes>
-          </Routes> */}
-        {/* </Router> */}
         <div className="header-container">
           <header className="App-header">
             <h1>Dilek Baykara</h1>
             <div id="menu-bar">
-              <h3>About</h3>
-              <h3>Projects</h3>
-              <h3>Resume</h3>
+              <button onClick={handleClick2} className="navbar-button">
+                About
+              </button>
+              <button onClick={handleClick} className="navbar-button">
+                Projects
+              </button>
+              <button onClick={handleClick3} className="navbar-button">
+                Resume
+              </button>
 
               <input type="checkbox" id="checkbox" onClick={toggleDarkMode} />
               <h3>Dark</h3>
             </div>
           </header>
         </div>
+        <div ref={ref2}></div>
         <div className="content">
           <div id="intro">Hi, My name is Dilek Baykara</div>
           <About />
@@ -164,10 +176,11 @@ function App() {
               </div>
             </div>
           </div>
-
+          <div ref={ref}></div>
           <Projects />
 
           <Resume />
+          <div ref={ref3}></div>
         </div>
       </div>
     </div>
