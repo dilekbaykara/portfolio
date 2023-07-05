@@ -4,13 +4,20 @@
   background-color: inherit;
 }
 
-.App {
+#App {
   text-align: center;
-  background-color: inherit;
   bottom: 0;
   top: 100px;
   position: absolute;
   overflow: auto;
+}
+
+div {
+  background-color: inherit;
+}
+
+#root {
+  background-color: inherit;
 }
 
 h1 {
@@ -395,26 +402,19 @@ svg {
   #intro,
   #info {
     display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+
+    flex-direction: column;
   }
 
   #about-me {
     display: flex;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+
+    flex-direction: column;
   }
   #skills-box,
   .skill-divs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
   }
 }
 
@@ -431,5 +431,29 @@ svg {
   body {
     width: 50%;
     height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #project-div-1,
+  #project-div-2 {
+    flex-direction: column;
+  }
+
+  .App-header {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #menu-bar {
+    float: none;
+    text-align: right;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  #resume-box {
+    margin-top: 50rem;
   }
 }

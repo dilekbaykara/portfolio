@@ -8,7 +8,7 @@ function About() {
       <div id="info">
         I am a self taught software engineer with years of experience as a
         graphic designer and illustrator. I love solving problems and building
-        complex projects that blend my love of programming with my innate desire
+        complex websites that blend my love of programming with my innate desire
         to create beautiful and functional projects.
       </div>
     </div>

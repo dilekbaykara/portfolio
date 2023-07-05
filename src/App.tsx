@@ -28,7 +28,7 @@ function App() {
     ref3.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="App">
+    <div id="App" className={darkMode ? "dark" : "light"}>
       <div className={darkMode ? "dark" : "light"}>
         <div className="header-container">
           <header className="App-header">
