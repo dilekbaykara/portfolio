@@ -1,11 +1,14 @@
 import React from "react";
-
+import pdf from "./types.s";
+const resumePDF = pdf("Dilek_Baykara_Resume_2023.pdf");
 function Resume() {
   return (
     <div id="resume-box">
       <div id="resume">Get in Touch</div>
       <p>If you would like to work together, please reach out!</p>
-      <button id="resume-button">Download Resume</button>
+      <a href={resumePDF} download={resumePDF}>
+        <button id="resume-button">Download Resume</button>
+      </a>
       <div className="icon-footer">
         <a
           id="github-icon"
