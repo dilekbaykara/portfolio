@@ -4,11 +4,18 @@
   background-color: inherit;
 }
 
+html,
+body {
+  min-height: 100vh;
+}
+
 #App {
   text-align: center;
   bottom: 0;
   top: 100px;
   position: absolute;
+  left: 0;
+  right: 0;
   overflow: auto;
 }
 
@@ -428,12 +435,12 @@ svg {
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
   body {
     width: 50%;
     height: 100%;
   }
-}
+} */
 
 @media only screen and (max-width: 800px) {
   #project-div-1,
