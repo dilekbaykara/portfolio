@@ -1,6 +1,6 @@
 import React from "react";
 import pdf from "./types.s";
-const resumePDF = pdf("Dilek_Baykara_Resume_2023.pdf");
+const resumePDF = pdf("Dilek_Baykara_Resume_2023_.pdf");
 function Resume() {
   return (
     <div id="resume-box">
