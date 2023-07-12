@@ -15,6 +15,10 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+
+    var element = document.body;
+    element.classList.toggle(".dark");
+
     setDarkMode((darkMode) => {
       localStorage.setItem("dark", JSON.stringify(darkMode));
       return darkMode;
@@ -34,8 +38,8 @@ function App() {
     ref3.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div id="App" className={darkMode ? ".dark" : ".light"}>
-      <body className={darkMode ? ".dark" : ".light"}>
+    <div id="App" className={darkMode ? "dark" : "light"}>
+      <body className={darkMode ? "dark" : "light"}>
         <div className={darkMode ? "dark" : "light"}>
           <div className="header-container">
             <header className="App-header">
