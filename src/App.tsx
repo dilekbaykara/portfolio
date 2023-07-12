@@ -16,9 +16,6 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
 
-    var element = document.body;
-    element.classList.toggle(".dark");
-
     setDarkMode((darkMode) => {
       localStorage.setItem("dark", JSON.stringify(darkMode));
       return darkMode;

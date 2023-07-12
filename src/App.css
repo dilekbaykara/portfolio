@@ -1,12 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: inherit;
+  background-color: transparent;
 }
 
 html,
 body {
   min-height: 100vh;
+  background-color: inherit;
 }
 
 #App {
@@ -20,7 +21,7 @@ body {
 }
 
 div {
-  background-color: inherit;
+  background-color: transparent;
 }
 
 #root {
@@ -63,7 +64,7 @@ h3 {
   height: 100px;
   position: fixed;
   margin-top: 0;
-  background-color: inherit;
+  background-color: transparent;
   top: 0;
 }
 
@@ -77,6 +78,7 @@ h3 {
   height: 100px;
   position: fixed;
   margin-top: 0;
+  color: inherit;
   background-color: inherit;
   border-bottom: solid;
   top: 0;
