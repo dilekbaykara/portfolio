@@ -105,6 +105,7 @@ h3 {
   display: flex;
   gap: 1rem;
   margin-left: 15rem;
+  align-items: center;
 }
 
 hr {
