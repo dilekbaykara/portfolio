@@ -12,9 +12,15 @@ import Resume from "./Resume";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+    setDarkMode((darkMode) => {
+      localStorage.setItem("dark", JSON.stringify(darkMode));
+      return darkMode;
+    });
   };
+
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
   const ref2 = useRef() as MutableRefObject<HTMLDivElement>;
   const ref3 = useRef() as MutableRefObject<HTMLDivElement>;
@@ -29,7 +35,7 @@ function App() {
   };
   return (
     <div id="App" className={darkMode ? "dark" : "light"}>
-      <body className={darkMode ? "dark" : "light"}>
+      <body className={darkMode ? ".dark" : ".light"}>
         <div className={darkMode ? "dark" : "light"}>
           <div className="header-container">
             <header className="App-header">
