@@ -1,4 +1,4 @@
-import { MutableRefObject, useRef, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import "./App.css";
 import { Element } from "react-scroll";
 // import { BrowserRouter as Router } from "react-router-dom";
@@ -13,13 +13,28 @@ import Resume from "./Resume";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    const existingPreference = localStorage.getItem("darkMode");
+    if (existingPreference) {
+      existingPreference === "light" ? setDarkMode(false) : setDarkMode(true);
+    } else {
+      setDarkMode(true);
+      localStorage.setItem("darkMode", "dark");
+    }
+  }, []);
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
 
-    setDarkMode((darkMode) => {
-      localStorage.setItem("dark", JSON.stringify(darkMode));
-      return darkMode;
-    });
+    if (darkMode === false) {
+      setDarkMode(!darkMode);
+
+      localStorage.setItem("darkMode", "dark");
+    } else {
+      localStorage.setItem("darkMode", "light");
+    }
+    var element = document.body;
+    element.classList.toggle(".dark");
   };
 
   const ref = useRef() as MutableRefObject<HTMLDivElement>;
@@ -52,7 +67,13 @@ function App() {
                   Resume
                 </button>
 
-                <input type="checkbox" id="checkbox" onClick={toggleDarkMode} />
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  onClick={toggleDarkMode}
+                  onChange={(event) => setDarkMode(event.currentTarget.checked)}
+                  checked={darkMode}
+                />
                 <h3>Dark</h3>
               </div>
             </header>
@@ -197,3 +218,6 @@ function App() {
 }
 
 export default App;
+function setItems(darkMode: boolean) {
+  throw new Error("Function not implemented.");
+}

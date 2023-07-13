@@ -310,17 +310,17 @@ p {
 }
 
 #resume-box {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5rem;
   height: 10rem;
   background-color: inherit;
   padding-top: 45rem;
-  padding-bottom: 5rem;
-  margin-top: 5rem;
+  padding-bottom: 10rem;
   gap: 20px;
 }
 
 #resume {
-  display: flex;
-  flex-direction: column;
   font-family: "din-2014", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -412,13 +412,19 @@ svg {
   #intro,
   #info {
     display: flex;
+    margin-top: -2rem;
+    flex-direction: column;
+  }
 
+  #about-box {
+    display: flex;
+    margin-bottom: 8rem;
     flex-direction: column;
   }
 
   #about-me {
     display: flex;
-
+    margin: 1rem;
     flex-direction: column;
   }
   #skills-box,
@@ -446,6 +452,10 @@ svg {
 } */
 
 @media only screen and (max-width: 800px) {
+  #projects-div {
+    margin-top: -4rem;
+  }
+
   #project-div-1,
   #project-div-2 {
     flex-direction: column;
@@ -465,6 +475,42 @@ svg {
   }
 
   #resume-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 49rem;
+    padding-bottom: 13rem;
     margin-top: 50rem;
+    align-items: center;
+  }
+
+  #resume-description {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 300px) {
+  #about-box {
+    display: flex;
+    margin-bottom: 10rem;
+    margin-top: -2rem;
+    flex-direction: column;
+  }
+
+  #skills-box,
+  .skill-divs {
+    display: flex;
+    flex-direction: column;
+    margin-top: -3px;
+    gap: 10px;
+  }
+  .svg-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  #projects-div {
+    margin-top: 15rem;
   }
 }

@@ -5,11 +5,13 @@ function Resume() {
   return (
     <div id="resume-box">
       <div id="resume">Get in Touch</div>
-      <p>If you would like to work together, please reach out!</p>
+      <p id="resume-description">
+        If you would like to work together, please reach out!
+      </p>
       <a href={resumePDF} download={resumePDF}>
         <button id="resume-button">Download Resume</button>
       </a>
-      <div className="icon-footer">
+      <div className="icon-footer" id="resume-icons">
         <a
           id="github-icon"
           className="footer-icon"
